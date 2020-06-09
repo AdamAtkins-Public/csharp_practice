@@ -69,8 +69,7 @@ public class P039
     static void Main()
     {
         //TestSideLengths(120);
-
-        Stopwatch time = new Stopwatch();
+        Stopwatch time = Stopwatch.StartNew();
         int max_solutions = 0;
         int target = 1000;
         int max_p = 0;
@@ -85,7 +84,7 @@ public class P039
             }
         }
         time.Stop();
-        Console.WriteLine(String.Format("Maximum amount of solutions at perimeter: {0}\nRuntime:{1}", max_p, time.ElapsedMilliseconds));
+        Console.WriteLine(String.Format("Maximum amount of solutions at perimeter: {0}\nRuntime: {1}ms", max_p, time.ElapsedMilliseconds));
         Console.ReadLine();
     }
 }
