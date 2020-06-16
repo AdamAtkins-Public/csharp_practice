@@ -14,6 +14,9 @@ using System.Collections.Generic;
 
 public class P039
 {
+    public P039()
+    {
+    }
     private static int PythagoreanTheorem(int a, int b)
     {
             return (int)Math.Pow(a, 2) + (int)Math.Pow(b, 2);
@@ -57,7 +60,7 @@ public class P039
         return side_lengths;
     }
 
-    public static void TestSideLengths(int p)
+    private static void TestSideLengths(int p)
     {
         var side_lengths = SideLengths(p);
         foreach (var lengths in side_lengths)
@@ -66,7 +69,7 @@ public class P039
         }
     }
 
-    static void Main()
+    public void Solution()
     {
         //TestSideLengths(120);
         Stopwatch time = Stopwatch.StartNew();
@@ -85,6 +88,5 @@ public class P039
         }
         time.Stop();
         Console.WriteLine(String.Format("Maximum amount of solutions at perimeter: {0}\nRuntime: {1}ms", max_p, time.ElapsedMilliseconds));
-        Console.ReadLine();
     }
 }
